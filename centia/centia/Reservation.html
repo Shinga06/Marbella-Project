@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservations | Marbella</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Lora&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Existing navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Marbella</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Menu.html">Menu</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Reservation.html">Reservations</a>
+            <a href="Events_and_catering.html">Events</a>
+            <a href="Contact_us.html">Contact</a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="reservation-hero">
+        <div class="hero-background">
+            <video class="background-video" autoplay muted loop playsinline webkit-playsinline>
+                <source src="media/Reservation.mp4" type="video/mp4">
+                <!-- Fallback image if video fails -->
+                <img src="media/Reservation.jpg" alt="Candlelit Dining Room">
+        </div>
+        <div class="ambient-overlay"></div>
+        <div class="hero-content fade-in">
+            <span class="accent-text">Experience</span>
+            <h1 class="elegant-title">Reserve Your Table</h1>
+            <div class="title-divider"></div>
+            <p class="elegant-subtitle">An unforgettable experience begins with a simple moment — the reservation.</p>
+        </div>
+    </div>
+
+    <!-- Reservation Form Section -->
+    <section class="reservation-form-section">
+        <div class="form-container glass-effect">
+            <form id="reservationForm" class="elegant-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <select id="time" required>
+                            <option value="">Select Time</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="18:30">6:30 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="19:30">7:30 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="20:30">8:30 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests" required>
+                            <option value="">Select Number</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5 People</option>
+                            <option value="6">6 People</option>
+                            <option value="7+">7+ People</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="occasion">Special Occasion</label>
+                        <select id="occasion">
+                            <option value="">Select Occasion (Optional)</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="anniversary">Anniversary</option>
+                            <option value="proposal">Proposal</option>
+                            <option value="business">Business Dinner</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="requests">Special Requests</label>
+                        <textarea id="requests" rows="4" placeholder="Any dietary requirements or special arrangements?"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn-elegant shine-effect">
+                    <span>Reserve Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Experience Highlights -->
+    <section class="experience-highlights">
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Romantic Settings</h3>
+                <p>Intimate atmosphere with candlelit tables</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-wine-glass-alt"></i>
+                <h3>Wine Pairing</h3>
+                <p>Expert sommelier recommendations</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-music"></i>
+                <h3>Live Music</h3>
+                <p>Elegant background melodies</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-concierge-bell"></i>
+                <h3>Personal Service</h3>
+                <p>Attentive staff for your comfort</p>
+            </div>
+        </div>
+    </section>
+
+    
+        
+
+    <!-- Romantic Quote -->
+    <section class="closing-quote">
+        <div class="quote-container">
+            <blockquote>
+                "The beginning of something special often starts with a simple yes."
+            </blockquote>
+            <a href="Menu.html" class="btn-elegant">
+                <span>View Our Menu</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <div class="popup" id="successPopup">
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Reservation Confirmed!</h3>
+            <p>Your reservation has been successfully sent to MARBELLA.</p>
+            <p class="thank-you">Thank you for choosing to dine with us.</p>
+            <button class="popup-close" onclick="closePopup()" title="Close popup">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/reservation.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Marbella</h3>
+                <p>Where fine French dining meets elegance and romance in the heart of South Africa.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Follow us on Facebook">
+                        <div class="icon-circle">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon" title="Follow us on Instagram">
+                        <div class="icon-circle">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon" title="Follow us on Twitter">
+                        <div class="icon-circle">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <div class="footer-links">
+                    <p>Monday – Thursday<br>17:00 – 22:00</p>
+                    <p>Friday – Sunday<br>17:00 – 23:00</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <div class="footer-links">
+                    <a href="Menu.html">Menu</a>
+                    <a href="Reservation.html">Reservations</a>
+                    <a href="Events_and_catering.html">Private Events</a>
+                    <a href="Contact_us.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-links">
+                    <p>123 Love Street<br>Morningside, Durban</p>
+                    <p>Tel: +27 31 456 7890</p>
+                    <p>Email: info@marbella.co.za</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Marbella. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
