@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Marbella</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Lora&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Marbella</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Menu.html">Menu</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Reservation.html">Reservations</a>
+            <a href="Events_and_catering.html">Events</a>
+            <a href="Contact_us.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gallery-hero">
+        <div class="hero-background">
+            <video class="background-video" autoplay muted loop playsinline webkit-playsinline>
+                <source src="media/dining.mp4" type="video/mp4">
+                <!-- Fallback image if video fails -->
+                <img src="media/gallery/hero-bg.jpg" alt="Restaurant Ambiance">
+            </video>
+        </div>
+        <div class="ambient-overlay"></div>
+        <div class="hero-content fade-in">
+            <h1 class="elegant-title">Moments at Marbella</h1>
+            <div class="title-divider"></div>
+            <p class="elegant-subtitle">A glimpse into the warmth, beauty, and unforgettable ambiance of our world</p>
+        </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="gallery-filters">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ambiance">Ambiance</button>
+            <button class="filter-btn" data-filter="dishes">Dishes</button>
+            <button class="filter-btn" data-filter="cocktails">Cocktails</button>
+            <button class="filter-btn" data-filter="guests">Guests</button>
+        </div>
+    </div>
+
+    <!-- Add this script section right after the filter bar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Image Grid -->
+    <div class="gallery-grid">
+        <!-- Ambiance Items -->
+        <div class="gallery-item" data-category="ambiance">
+            <img src="media/Candle light dining room.jpg" alt="Candlelit Dining Room" loading="lazy">
+            <div class="item-overlay">
+                <span class="item-category">Ambiance</span>
+                <h3 class="item-title">Evening Elegance</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="ambiance">
+            <img src="media/Wine Cellar.jpg" alt="Wine Cellar" loading="lazy">
+            <div class="item-overlay">
+                <span class="item-category">Ambiance</span>
+                <h3 class="item-title">The Wine Sanctuary</h3>
+            </div>
+        </div>
+
+        <!-- Dishes Items -->
+        <div class="gallery-item" data-category="dishes">
+            <img src="media/duck.jpg" alt="Signature Duck" loading="lazy">
+            <div class="item-overlay">
+                <span class="item-category">Dishes</span>
+                <h3 class="item-title">Canard à l'Orange</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="dishes">
+            <img src="media/french dessert.jpg" alt="French Dessert" loading="lazy">
+            <div class="item-overlay">
+                <span class="item-category">Dishes</span>
+                <h3 class="item-title">Crème Brûlée</h3>
+            </div>
+        </div>
+
+        <!-- Cocktails Items -->
+        <div class="gallery-item" data-category="cocktails">
+            <img src="media/signature cocktail.jpg" alt="Signature Cocktail" loading="lazy">
+            <div class="item-overlay">
+                <span class="item-category">Cocktails</span>
+                <h3 class="item-title">Midnight in Paris</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="Wine">
+            <img src="media/Wine Selection.jpg" alt="Wine Selection" loading="lazy">
+            <div class="item-overlay">
+                <span class="item-category">Wine</span>
+                <h3 class="item-title">French 75</h3>
+            </div>
+        </div>
+
+        <!-- Guests Items -->
+        <div class="gallery-item" data-category="guests">
+            <img src="media/Romantc evening.jpg" alt="Romantic Dinner" loading="lazy">
+            <div class="item-overlay">
+                <span class="item-category">Guests</span>
+                <h3 class="item-title">Romantic Evening</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="guests">
+            <img src="media/Celebration moments.jpg" alt="Special Celebration" loading="lazy">
+            <div class="item-overlay">
+                <span class="item-category">Guests</span>
+                <h3 class="item-title">Celebration Moments</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="gallery-lightbox">
+        <button class="lightbox-close">&times;</button>
+        <div class="lightbox-content">
+            <button class="lightbox-prev" title="Previous image"><i class="fas fa-chevron-left"></i></button>
+            <img src="" alt="" class="lightbox-image">
+            <button class="lightbox-next" title="Next image"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="gallery-cta">
+        <p class="cta-quote">Every photo tells a story — and yours could be next.</p>
+        <a href="Reservation.html" class="cta-button">
+            Reserve Your Table <i class="fas fa-arrow-right"></i>
+        </a>
+    </section>
+
+    <script src="js/gallery.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Marbella</h3>
+                <p>Where fine French dining meets elegance and romance in the heart of South Africa.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Follow us on Facebook">
+                        <div class="icon-circle">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon" title="Follow us on Instagram">
+                        <div class="icon-circle">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon" title="Follow us on Twitter">
+                        <div class="icon-circle">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <div class="footer-links">
+                    <p>Monday – Thursday<br>17:00 – 22:00</p>
+                    <p>Friday – Sunday<br>17:00 – 23:00</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <div class="footer-links">
+                    <a href="Menu.html">Menu</a>
+                    <a href="Reservation.html">Reservations</a>
+                    <a href="Events_and_catering.html">Private Events</a>
+                    <a href="Contact_us.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-links">
+                    <p>123 Love Street<br>Morningside, Durban</p>
+                    <p>Tel: +27 31 456 7890</p>
+                    <p>Email: info@marbella.co.za</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Marbella. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

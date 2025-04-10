@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Marbella</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/f1943575b4.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Lora&display=swap" rel="stylesheet">
+  <!-- Add Google Fonts with Petit Formal Script for romantic accents -->
+  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Marbella</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Menu.html">Menu</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Reservation.html">Reservations</a>
+            <a href="Events_and_catering.html">Events</a>
+            <a href="Contact_us.html">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Enhanced Hero Section -->
+    <div class="contact-container">
+        <div class="contact-background"></div>
+        <div class="contact-content fade-in">
+            <span class="accent-text">Welcome to</span>
+            <h1>Let's Connect</h1>
+            <p>Whether you're planning a romantic evening or a grand celebration, 
+               we're here to make it seamless and unforgettable.</p>
+        </div>
+    </div>
+
+    <!-- Enhanced Contact Details Section -->
+    <section class="contact-details scroll-fade">
+        <div class="details-column">
+            <div class="contact-info">
+                <div class="info-group">
+                    <h2><span class="accent-line">Visit Us</span></h2>
+                    
+                    <div class="location-entry">
+                        <h3>Durban - Morningside</h3>
+                        <p>123 Love Street, Morningside, Durban</p>
+                        <p>Contact: +27 31 456 7890</p>
+                        <p>Hours: Mon-Thu 17:00-22:00 | Fri-Sun 17:00-23:00</p>
+                    </div>
+
+                    <div class="location-entry">
+                        <h3>Johannesburg - Sandton</h3>
+                        <p>456 Rivonia Boulevard, Sandton</p>
+                        <p>Contact: +27 11 789 0123</p>
+                        <p>Hours: Mon-Thu 17:00-22:00 | Fri-Sun 17:00-23:30</p>
+                    </div>
+
+                    <div class="location-entry">
+                        <h3>Cape Town - V&A Waterfront</h3>
+                        <p>789 Dock Road, V&A Waterfront</p>
+                        <p>Contact: +27 21 234 5678</p>
+                        <p>Hours: Mon-Sun 12:00-23:00</p>
+                    </div>
+
+                    <div class="location-entry">
+                        <h3>East London - Beacon Bay</h3>
+                        <p>321 Beacon Bay Road</p>
+                        <p>Contact: +27 43 567 8901</p>
+                        <p>Hours: Mon-Thu 17:00-22:00 | Fri-Sun 17:00-23:00</p>
+                    </div>
+                </div>
+                
+                <h2>Contact</h2>
+                <p>Phone: +27 31 456 7890<br>
+                Email: reservations@marbella.co.za</p>
+                
+                <h2>Hours</h2>
+                <p>Monday – Thursday: 17:00 – 22:00<br>
+                Friday – Sunday: 17:00 – 23:00</p>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="Follow us on Instagram">
+                        <div class="icon-circle">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon" title="Follow us on Facebook">
+                        <div class="icon-circle">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="map-column">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.2654700269583!2d31.027799415397715!3d-29.83161798194473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7075d3a36389d%3A0x1e2ce77b5816fff8!2sMorningside%2C%20Durban!5e0!3m2!1sen!2sza!4v1677831054003!5m2!1sen!2sza" width="600" height="450" class="map-iframe" title="Location map of Marbella Restaurant in Morningside, Durban" allowfullscreen=""></iframe>
+            <p class="map-caption">Find us nestled in the heart of Morningside.</p>
+        </div>
+    </section>
+
+    <!-- Enhanced Contact Form Section -->
+    <section class="contact-form-section scroll-fade">
+        <form class="contact-form glass-effect">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number (optional)</label>
+                <input type="tel" id="phone">
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="reservation">Reservation</option>
+                    <option value="private-event">Private Event</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-elegant">
+                <span>Send Message</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </form>
+    </section>
+
+    <!-- Enhanced Closing Section -->
+    <section class="closing-section scroll-fade">
+        <p class="elegant-quote">Marbella is more than a restaurant —
+           <span class="cursive">it's your next beautiful memory.</span></p>
+        <a href="Reservation.html" class="cta-button shine-effect">
+            Reserve a Table <span class="arrow">➤</span>
+        </a>
+    </section>
+
+    <!-- Add JavaScript file for animations -->
+    <script src="js/animations.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Marbella</h3>
+                <p>Where fine French dining meets elegance and romance in the heart of South Africa.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Follow us on Facebook">
+                        <div class="icon-circle">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon" title="Follow us on Instagram">
+                        <div class="icon-circle">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon" title="Follow us on Twitter">
+                        <div class="icon-circle">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <div class="footer-links">
+                    <p>Monday – Thursday<br>17:00 – 22:00</p>
+                    <p>Friday – Sunday<br>17:00 – 23:00</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <div class="footer-links">
+                    <a href="Menu.html">Menu</a>
+                    <a href="Reservation.html">Reservations</a>
+                    <a href="Events_and_catering.html">Private Events</a>
+                    <a href="Contact_us.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-links">
+                    <p>123 Love Street<br>Morningside, Durban</p>
+                    <p>Tel: +27 31 456 7890</p>
+                    <p>Email: info@marbella.co.za</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Marbella. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

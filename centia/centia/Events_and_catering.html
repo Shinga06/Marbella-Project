@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events & Catering | Marbella</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Lora&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Marbella</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Menu.html">Menu</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Reservation.html">Reservations</a>
+            <a href="Events_and_catering.html">Events</a>
+            <a href="Contact_us.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="reservation-hero">
+        <div class="hero-background">
+            <video class="background-video" autoplay muted loop playsinline webkit-playsinline>
+                <source src="media/Events at Marbella.mp4" type="video/mp4">
+                <img src="media/Romantc evening.jpg" alt="Elegant Event Setup">
+            </video>
+        </div>
+        <div class="ambient-overlay"></div>
+        <div class="hero-content fade-in">
+            <span class="accent-text">Host with Grace</span>
+            <h1 class="elegant-title">Events & Private Catering</h1>
+            <p class="elegant-subtitle">From intimate dinners to grand celebrations — Marbella brings elegance to your table.</p>
+        </div>
+    </section>
+
+    <!-- Offerings Section -->
+    <section class="offerings-section">
+        <div class="container">
+            <h2 class="section-title">Our Offerings</h2>
+            <div class="offerings-grid">
+                <div class="offering-card">
+                    <i class="fas fa-glass-cheers"></i>
+                    <h3>Private Events</h3>
+                    <p>Intimate gatherings and celebrations in our elegant venue</p>
+                </div>
+                <div class="offering-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Off-site Catering</h3>
+                    <p>Bringing Marbella's excellence to your chosen location</p>
+                </div>
+                <div class="offering-card">
+                    <i class="fas fa-crown"></i>
+                    <h3>Bespoke Service</h3>
+                    <p>Customized menus and experiences for your special occasion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section class="gallery-preview">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="media/Wedding Celebtration.jpg" alt="Wedding Celebration">
+                <div class="item-overlay">
+                    <span class="item-category">Wedding</span>
+                    <h3 class="item-title">Golden Hour Toast</h3>
+                </div>
+            </div>
+            <!-- Add more gallery items here -->
+            <div class="gallery-item">
+                <img src="media/Birthday celebrations.jpg" alt="Birthday Celebration">
+                <div class="item-overlay">
+                    <span class="item-category">Birthday Dinner</span>
+                    <h3 class="item-title">Golden Mingle Moments</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="media/Love at Marbella.jpg" alt="Birthday Celebration">
+                <div class="item-overlay">
+                    <span class="item-category">Kiss</span>
+                    <h3 class="item-title">Love at Marbella</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section" id="quoteForm">
+        <div class="form-container glass-effect">
+            <form class="contact-form">
+                <h2>Request a Quote</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="event">Event Type</label>
+                        <select id="event" required>
+                            <option value="">Select Event</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="private">Private Dinner</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Event Details</label>
+                        <textarea id="message" rows="5" placeholder="Number of guests, preferred dates, venue, etc." required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn-elegant">
+                    <span>Send Request</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Success Popup -->
+    <div class="popup" id="successPopup">
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Request Sent!</h3>
+            <p>Thank you for considering Marbella for your special event.</p>
+            <p class="thank-you">Our team will contact you shortly to discuss your requirements.</p>
+            <button class="popup-close" onclick="closePopup()" title="Close popup">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                <span class="sr-only">Close</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Marbella</h3>
+                <p>Where fine French dining meets elegance and romance in the heart of South Africa.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Follow us on Facebook">
+                        <div class="icon-circle">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon" title="Follow us on Instagram">
+                        <div class="icon-circle">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon" title="Follow us on Twitter">
+                        <div class="icon-circle">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <div class="footer-links">
+                    <p>Monday – Thursday<br>17:00 – 22:00</p>
+                    <p>Friday – Sunday<br>17:00 – 23:00</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <div class="footer-links">
+                    <a href="Menu.html">Menu</a>
+                    <a href="Reservation.html">Reservations</a>
+                    <a href="Events_and_catering.html">Private Events</a>
+                    <a href="Contact_us.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-links">
+                    <p>123 Love Street<br>Morningside, Durban</p>
+                    <p>Tel: +27 31 456 7890</p>
+                    <p>Email: info@marbella.co.za</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Marbella. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
